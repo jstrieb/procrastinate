@@ -39,14 +39,12 @@ please reach out and let me know!
 
 To avoid reconnecting to my website every time you want a new comic, this
 repository includes a GitHub Action to automatically generate a "bookmarklet"
-version of the code.
-
-The [bookmarklet](bookmarklet.js) will run identically to the main script,
+version of the code. The bookmarklet will run identically to the main script,
 except if the main script is updated, the bookmarklet will not be.
 
-To use the bookmarklet, go to the page
-[here](https://raw.githubusercontent.com/jstrieb/procrastinate/main/bookmarklet.js),
-highlight all of the code, and drag it to your bookmarks bar.
+To use the bookmarklet, go
+[here](https://jstrieb.github.io/procrastinate/bookmarklet) and drag the big
+button to your bookmarks bar.
 
 # To-do
 

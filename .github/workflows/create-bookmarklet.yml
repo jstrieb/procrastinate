@@ -21,6 +21,7 @@ jobs:
       # Generate bookmarklet from main.js
       - name: Generate bookmarklet
         run: |
+          cd bookmarklet
           python3 generate_bookmarklet.py
 
       # Commit changes to the repository
@@ -28,6 +29,8 @@ jobs:
         run: |
           git config --global user.name "Jacob Strieb"
           git config --global user.email "jstrieb@users.noreply.github.com"
+          cd bookmarklet
+          git add index.html
           git add bookmarklet.js
           # Commit with the bookmarklet and most recent commit message
           git commit --reuse-message=HEAD || true
