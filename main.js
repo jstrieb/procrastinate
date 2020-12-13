@@ -67,7 +67,7 @@ function random_instagram(user_id) {
 
     let photo = feed.edges[photo_index - fetched].node;
     return `https://instagram.com/p/${photo.shortcode}`;
-  }
+  };
 }
 
 
@@ -118,10 +118,9 @@ async function main() {
   let keys = Object.keys(comic_list);
   /* TODO: weight randomness by estimated number of comics at each source to
    * reduce the likelihood of repeats */
-  let rand_key = keys[Math.floor(Math.random() * keys.length)]
+  let rand_key = keys[Math.floor(Math.random() * keys.length)];
   let rand_url = await comic_list[rand_key]();
   window.location.replace(rand_url);
 }
 
 main();
-
