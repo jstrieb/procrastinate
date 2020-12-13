@@ -88,7 +88,7 @@ const comic_list = {
   "Buttersafe": K("https://www.buttersafe.com/random"),
   "Savage Chickens": K("https://www.savagechickens.com/?random="),
   "Moonbeard": K("https://moonbeard.com/?randomcomic"),
-  "Happle Tea!": K("http://www.happletea.com/?random&nocache=1"),
+  /* "Happle Tea!": K("http://www.happletea.com/?random&nocache=1"), */
   "XKCD": K("https://c.xkcd.com/random/comic/"),
   "The Perry Bible Fellowship": K("https://pbfcomics.com/random"),
   "Abstruse Goose": K("https://abstrusegoose.com/pseudorandom.php"),
