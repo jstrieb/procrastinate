@@ -27,7 +27,7 @@ function random_instagram(user_id) {
   return async function() {
     let INITIAL_FETCH_NUM = 12;
 
-    /* Get the user's profile and find out how many photos we can pick from. */
+    /* Get the user profile and find out how many photos we can pick from. */
     let variables = {
       "id": `${user_id}`,
       "first": INITIAL_FETCH_NUM,
@@ -77,8 +77,10 @@ function random_instagram(user_id) {
  ******************************************************************************/
 
 /*
- * List of comics from which to pick randomly. Comment out any you don't want!
+ * List of comics from which to pick randomly. Comment out any you do not want!
+ * Some require a nonce to get their random button to work properly
  */
+const nonce = Math.floor(Math.random() * 9999999);
 const comic_list = {
   "Junior Scientist Power Hour": K("https://www.jspowerhour.com/random-comic"),
   "Existential Comics": K("https://existentialcomics.com/comic/random"),
@@ -87,7 +89,7 @@ const comic_list = {
   "Buttersafe": K("https://www.buttersafe.com/random"),
   "Savage Chickens": K("https://www.savagechickens.com/?random="),
   "Moonbeard": K("https://moonbeard.com/?randomcomic"),
-  /* "Happle Tea!": K("http://www.happletea.com/?random&nocache=1"), */
+  "Happle Tea!": K(`http://www.happletea.com/?random&nocache=1&nonce=${nonce}`),
   "XKCD": K("https://c.xkcd.com/random/comic/"),
   "The Perry Bible Fellowship": K("https://pbfcomics.com/random"),
   "Abstruse Goose": K("https://abstrusegoose.com/pseudorandom.php"),
@@ -106,7 +108,7 @@ const comic_list = {
   "Otterly Human": K("https://otterlyhuman.com/?random&nocache=1&post_type=comic"),
   "Slice of Mallow": random_instagram("21373079684"),
   "Mr. Lovenstein": K("https://www.mrlovenstein.com/shuffle"),
-  "Swords": K("https://swordscomic.com/comic/random/"),
+  "Swords": K(`https://swordscomic.com/comic/random/?${nonce}`),
   "They Can Talk": K("https://theycantalk.com/random"),
   "The Meerkatguy": K("http://www.themeerkatguy.com/?random&nocache=1"),
   "Tales of Absurdity": K("http://talesofabsurdity.com/?random&nocache=1&post_type=comic"),
