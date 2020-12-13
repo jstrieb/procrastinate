@@ -3,7 +3,7 @@
 
 def main():
     with open("../main.js", "r") as f:
-        main_js = f.read().replace("\n", "")
+        main_js = f.read()
 
     with open("bookmarklet.js", "w") as f:
         f.write("javascript:(() => {\n")
@@ -11,6 +11,7 @@ def main():
         f.write("\n})();")
 
     with open("index.html", "w") as f:
+        main_js = main_js.replace("\n", "")
         f.write(f"""
 <!DOCTYPE html>
 <html>
