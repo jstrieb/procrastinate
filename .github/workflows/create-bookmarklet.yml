@@ -1,0 +1,31 @@
+name: Update Bookmarklet
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  generate_bookmarklet:
+    runs-on: ubuntu-latest
+    steps:
+      # Check out the repo
+      - uses: actions/checkout@v2
+
+      # Set up Python
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+          architecture: "x64"
+
+      # Generate bookmarklet from main.js
+      - name: Generate bookmarklet
+        run: |
+          python3 generate_bookmarklet.py
+
+      # Commit changes to the repository
+      - run: |
+          git add bookmarklet.js
+          # Commit with the bookmarklet and most recent commit message
+          git commit --reuse-message=HEAD || true
+          git push
