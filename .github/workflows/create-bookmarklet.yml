@@ -2,7 +2,7 @@ name: Update Bookmarklet
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   generate_bookmarklet:
@@ -24,7 +24,10 @@ jobs:
           python3 generate_bookmarklet.py
 
       # Commit changes to the repository
-      - run: |
+      - name: Commit changes to the repository
+        run: |
+          git config --global user.name "Jacob Strieb"
+          git config --global user.email "jstrieb@users.noreply.github.com"
           git add bookmarklet.js
           # Commit with the bookmarklet and most recent commit message
           git commit --reuse-message=HEAD || true
