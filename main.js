@@ -99,6 +99,19 @@ const comic_list = {
   "Wondermark": K("http://wondermark.com/random.php"),
   "Maximumble": K("https://maximumble.thebookofbiff.com/?random&nocache=1"),
   "Eirinnske Comics": random_instagram("232011854"),
+  "Jenns Comics": random_instagram("9243584532"),
+  "Strange Planet": random_instagram("10972317574"),
+  "Strange Trek": random_instagram("11311771462"),
+  "The Cannibal Orange": random_instagram("5992721166"),
+  "Otterly Human": random_instagram("2238933174"),
+  "Slice of Mallow": random_instagram("21373079684"),
+  "Mr. Lovenstein": K("https://www.mrlovenstein.com/shuffle"),
+  "Swords": K("https://swordscomic.com/comic/random/"),
+  "They Can Talk": K("https://theycantalk.com/random"),
+  "The Meerkatguy": K("http://www.themeerkatguy.com/?random&nocache=1"),
+  "Tales of Absurdity": K("http://talesofabsurdity.com/?random&nocache=1&post_type=comic"),
+  "Skeleton Claw Comics": K("https://www.skeletonclaw.com/random"),
+  "Inky Rickshaw": K("https://inkyrickshaw.com/?random&nocache=1"),
 };
 
 async function main() {
