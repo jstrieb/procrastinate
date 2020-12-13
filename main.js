@@ -23,36 +23,42 @@ function K(x) {
  * NOTE: Assumes that the user is public. If they go private, this whole thing
  * is gonna be a little bit fucked up
  */
-function random_instagram(username) {
+function random_instagram(user_id) {
   return async function() {
+    let INITIAL_FETCH_NUM = 12;
+
     /* Get the user's profile and find out how many photos we can pick from. */
-    let profile = await fetch(`https://instagram.com/${username}/?__a=1`)
-      .then(r => r.json().then(j => j.graphql.user));
-    let user_id = profile.id;
+    let variables = {
+      "id": `${user_id}`,
+      "first": INITIAL_FETCH_NUM,
+    };
+    let profile = await fetch(`https://instagram.com/graphql/query/`
+      + `?query_hash=003056d32c2554def87228bc3fd9668a`
+      + `&variables=${JSON.stringify(variables)}`)
+      .then(r => r.json().then(j => j.data.user));
     let feed = profile.edge_owner_to_timeline_media;
     let post_count = feed.count;
     let cursor = feed.page_info.end_cursor;
 
     /* Pick a random photo */
     let photo_index = Math.floor(Math.random() * post_count);
-    photo_index = 12;
 
-    /* Otherwise fetch from the feed until we get the right number. */
+    /* Fetch from the feed until we get the right number. */
     /* TODO: There has got to be a better way to do this than paging through
      * the whole feed... */
-    let fetch_num = 12;
+    let fetch_num = feed.edges.length;
     let fetched = fetch_num;
     while (fetched < photo_index + 1) {
       fetch_num = Math.min(50, photo_index - fetched + 1);
-      let variables = {
+      variables = {
         "id": `${user_id}`,
         "first": fetch_num,
         "after": cursor,
       };
-      let profile = await fetch(`https://instagram.com/graphql/query/`
+      profile = await fetch(`https://instagram.com/graphql/query/`
         + `?query_hash=003056d32c2554def87228bc3fd9668a`
         + `&variables=${JSON.stringify(variables)}`)
-        .then(r.json().then(j => j.data.user));
+        .then(r => r.json().then(j => j.data.user));
       feed = profile.edge_owner_to_timeline_media;
       cursor = feed.page_info.end_cursor;
       fetched += fetch_num;
@@ -92,7 +98,7 @@ const comic_list = {
   "Nedroid": K("http://nedroid.com/?randomcomic=1"),
   "Wondermark": K("http://wondermark.com/random.php"),
   "Maximumble": K("https://maximumble.thebookofbiff.com/?random&nocache=1"),
-  "Eirinnske Comics": random_instagram("eirinnske_comics"),
+  "Eirinnske Comics": random_instagram("232011854"),
 };
 
 async function main() {
