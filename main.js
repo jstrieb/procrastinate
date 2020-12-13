@@ -99,7 +99,7 @@ const comic_list = {
   "Gunshow": K("http://www.gunshowcomic.com/random"),
   "Nedroid": K("http://nedroid.com/?randomcomic=1"),
   "Wondermark": K("http://wondermark.com/random.php"),
-  "Maximumble": K("https://maximumble.thebookofbiff.com/?random&nocache=1"),
+  "Maximumble": K(`https://maximumble.thebookofbiff.com/?random&nocache=1&nonce=${nonce}`),
   "Eirinnske Comics": random_instagram("232011854"),
   "Jenns Comics": random_instagram("9243584532"),
   "Strange Planet": random_instagram("10972317574"),
