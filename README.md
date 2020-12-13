@@ -61,4 +61,5 @@ like to eventually support these sites:
 - [Buddy Gator](https://www.buddygator.com/)
 - [Spiked Math Comics](http://spikedmath.com)
 - [PhD Comics](http://spikedmath.com)
+- [Dilbert](https://dilbert.com/)
 - ... and many others!
