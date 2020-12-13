@@ -103,7 +103,7 @@ const comic_list = {
   "Strange Planet": random_instagram("10972317574"),
   "Strange Trek": random_instagram("11311771462"),
   "The Cannibal Orange": random_instagram("5992721166"),
-  "Otterly Human": random_instagram("2238933174"),
+  "Otterly Human": K("https://otterlyhuman.com/?random&nocache=1&post_type=comic"),
   "Slice of Mallow": random_instagram("21373079684"),
   "Mr. Lovenstein": K("https://www.mrlovenstein.com/shuffle"),
   "Swords": K("https://swordscomic.com/comic/random/"),
