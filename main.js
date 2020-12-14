@@ -114,6 +114,7 @@ const comic_list = {
   "Tales of Absurdity": K("http://talesofabsurdity.com/?random&nocache=1&post_type=comic"),
   "Skeleton Claw Comics": K("https://www.skeletonclaw.com/random"),
   "Inky Rickshaw": K("https://inkyrickshaw.com/?random&nocache=1"),
+  "The Boondocks": K("https://www.gocomics.com/random/boondocks"),
 };
 
 async function main() {
