@@ -117,6 +117,7 @@ const comic_list = {
   "Inky Rickshaw": K("https://inkyrickshaw.com/?random&nocache=1"),
   "The Boondocks": K("https://www.gocomics.com/random/boondocks"),
   "Dilbert (Classics)": K("https://www.gocomics.com/random/dilbert-classics"),
+  "Mushroom Movie": K("https://mushroommovie-blog.tumblr.com/random"),
 };
 
 async function main() {
