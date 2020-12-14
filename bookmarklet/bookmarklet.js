@@ -116,6 +116,7 @@ const comic_list = {
   "Skeleton Claw Comics": K("https://www.skeletonclaw.com/random"),
   "Inky Rickshaw": K("https://inkyrickshaw.com/?random&nocache=1"),
   "The Boondocks": K("https://www.gocomics.com/random/boondocks"),
+  "Dilbert (Classics)": K("https://www.gocomics.com/random/dilbert-classics"),
 };
 
 async function main() {
