@@ -14,7 +14,7 @@ to your bookmarks bar for endless fun!
 
 If you like the comics you see, please support the creators!
 
-Currently, the project has 31 hard-coded comic sources, but more will be added
+Currently, the project has 35 hard-coded comic sources, but more will be added
 over time. View the current list
 [here](https://github.com/jstrieb/procrastinate/blob/main/main.js#L83-114).
 
@@ -52,7 +52,7 @@ Long-term, I hope to add GitHub actions to periodically crawl websites that
 don't have a random button, so that they can be supported. For example, I would
 like to eventually support these sites:
 
-- [Dinosaur Comics](https://www.qwantz.com/)
+- ~[Dinosaur Comics](https://www.qwantz.com/)~
 - [Sorrowbacon](http://sorrowbacon.com)
 - [Wheat Comics](http://wheatcomics.com)
 - [The Jenkins Comic](https://thejenkinscomic.wordpress.com)

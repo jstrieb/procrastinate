@@ -117,6 +117,7 @@ const comic_list = {
   "The Boondocks": K("https://www.gocomics.com/random/boondocks"),
   "Dilbert (Classics)": K("https://www.gocomics.com/random/dilbert-classics"),
   "Mushroom Movie": K("https://mushroommovie-blog.tumblr.com/random"),
+  "Dinosaur Comics": K("https://qwantzfeed.tumblr.com/random"),
 };
 
 async function main() {
