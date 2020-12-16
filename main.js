@@ -118,6 +118,7 @@ const comic_list = {
   "Dilbert (Classics)": K("https://www.gocomics.com/random/dilbert-classics"),
   "Mushroom Movie": K("https://mushroommovie-blog.tumblr.com/random"),
   "Dinosaur Comics": K("https://qwantzfeed.tumblr.com/random"),
+  "Extra Fabulous Comics": K(`https://extrafabulouscomics.com/?random&nocache=1&nonce=${nonce}`),
 };
 
 async function main() {
