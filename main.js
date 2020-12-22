@@ -121,6 +121,7 @@ const comic_list = {
   "Extra Fabulous Comics": K(`https://extrafabulouscomics.com/?random&nocache=1&nonce=${nonce}`),
   "One Giant Hand": K("https://onegianthand.com/random"),
   "Apokalips": K("http://myapokalips.com/go/random"),
+  "Loading Artist": K("https://loadingartist.com/random"),
 };
 
 async function main() {
