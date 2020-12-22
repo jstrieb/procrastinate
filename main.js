@@ -122,6 +122,7 @@ const comic_list = {
   "One Giant Hand": K("https://onegianthand.com/random"),
   "Apokalips": K("http://myapokalips.com/go/random"),
   "Loading Artist": K("https://loadingartist.com/random"),
+  "909sickle": K("http://909sickle.net/random"),
 };
 
 async function main() {
