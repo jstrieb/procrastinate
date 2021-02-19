@@ -123,6 +123,7 @@ const comic_list = {
   "Apokalips": K("http://myapokalips.com/go/random"),
   "Loading Artist": K("https://loadingartist.com/random"),
   "909sickle": K("http://909sickle.net/random"),
+  "Saturday Morning Breakfast Cartoons": random_instagram("3209593136"),
 };
 
 async function main() {
